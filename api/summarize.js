@@ -1,7 +1,7 @@
 // api/summarize.js
 // Vercel Serverless Function — dùng Google Gemini API (Miễn phí)
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Chỉ cho phép POST
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
